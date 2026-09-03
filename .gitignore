@@ -15,12 +15,12 @@ venv/
 Thumbs.db
 
 # Ultralytics outputs and local configuration
-runs/
-gate/
-.yolo-config/
-datasets/
-wandb/
-mlruns/
+/runs/
+/gate/
+/.yolo-config/
+/datasets/
+/wandb/
+/mlruns/
 
 # Model artifacts and exports
 *.pt
@@ -40,8 +40,8 @@ secrets*
 *token*
 
 # Temporary and backup files
-tmp/
-temp/
+/tmp/
+/temp/
 *.tmp
 *.bak
 *.backup
@@ -49,4 +49,4 @@ temp/
 
 # Local preparation artifacts
 README_PUBLIC_DRAFT.md
-docs/canonical/
+/docs/canonical/
