@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# IDE and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Ultralytics outputs and local configuration
+runs/
+gate/
+.yolo-config/
+datasets/
+wandb/
+mlruns/
+
+# Model artifacts and exports
+*.pt
+*.pth
+*.onnx
+*.engine
+*.torchscript
+*.tflite
+*.mlpackage
+*.blob
+
+# Private/local configuration
+.env
+.env.*
+credentials*
+secrets*
+*token*
+
+# Temporary and backup files
+tmp/
+temp/
+*.tmp
+*.bak
+*.backup
+*.zip
+
+# Local preparation artifacts
+README_PUBLIC_DRAFT.md
+docs/canonical/

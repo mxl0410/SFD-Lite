@@ -1,0 +1,205 @@
+{
+  "version": "SFD-Lite-Canonical-v1",
+  "CANONICAL_COMPLEXITY": "PASS",
+  "paper_policy": {
+    "primary_params": "direct unfused parameter count",
+    "macs": "THOP direct multiply-accumulate count",
+    "flops": "torch.profiler direct operator FLOP attribution",
+    "prohibited": "Do not derive or publish FLOPs as 2 x MACs without explicit labeling.",
+    "coverage_warning": "Both profilers may omit unsupported custom or functional operators. Compare models only within this exact tool/source/input/state protocol and retain the operator audit."
+  },
+  "environment": {
+    "python": "3.12.13",
+    "torch": "2.13.0+cpu",
+    "ultralytics": "8.4.60",
+    "thop": "2.0.20",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "models": [
+    {
+      "label": "B0",
+      "yaml": "D:\\iwen-codex\\codex-shop\\experiments\\sfd_lite_canonical\\models\\B0_yolo11n_ciou.yaml",
+      "yaml_sha256": "7b9d8eb249c6c1e0b3176079d4681bfa0958c5c6816b8740857d6f40f800d642",
+      "state": "unfused_eval_fp32_cpu",
+      "input": [
+        1,
+        3,
+        640,
+        640
+      ],
+      "params_direct": 2591790,
+      "trainable_params_direct": 2591774,
+      "thop_params": 2591790,
+      "thop_macs": 3225139200,
+      "thop_gmacs": 3.2251392,
+      "torch_profiler_flops": 6383440000,
+      "torch_profiler_gflops": 6.38344,
+      "torch_profiler_nonzero_operators": [
+        {
+          "operator": "aten::conv2d",
+          "flops": 6320230400,
+          "calls": 88
+        },
+        {
+          "operator": "aten::bmm",
+          "flops": 61440000,
+          "calls": 2
+        },
+        {
+          "operator": "aten::add",
+          "flops": 1416000,
+          "calls": 16
+        },
+        {
+          "operator": "aten::mul",
+          "flops": 353600,
+          "calls": 2
+        }
+      ]
+    },
+    {
+      "label": "C0",
+      "yaml": "D:\\iwen-codex\\codex-shop\\experiments\\sfd_lite_canonical\\models\\C0_sfd_lite_canonical.yaml",
+      "yaml_sha256": "05e54b7473683b777454ccdebdd47a6611982f64a6c14a9c065d0bbc41221acc",
+      "state": "unfused_eval_fp32_cpu",
+      "input": [
+        1,
+        3,
+        640,
+        640
+      ],
+      "params_direct": 687572,
+      "trainable_params_direct": 687564,
+      "thop_params": 687572,
+      "thop_macs": 3303546188,
+      "thop_gmacs": 3.303546188,
+      "torch_profiler_flops": 6313165990,
+      "torch_profiler_gflops": 6.31316599,
+      "torch_profiler_nonzero_operators": [
+        {
+          "operator": "aten::conv2d",
+          "flops": 6298189976,
+          "calls": 88
+        },
+        {
+          "operator": "aten::mul",
+          "flops": 7507214,
+          "calls": 7
+        },
+        {
+          "operator": "aten::add",
+          "flops": 7468800,
+          "calls": 23
+        }
+      ]
+    },
+    {
+      "label": "C1",
+      "yaml": "D:\\iwen-codex\\codex-shop\\experiments\\sfd_lite_canonical\\models\\C1_no_sa_spd_lite.yaml",
+      "yaml_sha256": "e6bf855f9a971f10207f6340bed70133d8aced8507c548014af687c2b3845e0b",
+      "state": "unfused_eval_fp32_cpu",
+      "input": [
+        1,
+        3,
+        640,
+        640
+      ],
+      "params_direct": 688528,
+      "trainable_params_direct": 688520,
+      "thop_params": 688528,
+      "thop_macs": 3398573388,
+      "thop_gmacs": 3.398573388,
+      "torch_profiler_flops": 6509773990,
+      "torch_profiler_gflops": 6.50977399,
+      "torch_profiler_nonzero_operators": [
+        {
+          "operator": "aten::conv2d",
+          "flops": 6501351576,
+          "calls": 86
+        },
+        {
+          "operator": "aten::add",
+          "flops": 7468800,
+          "calls": 23
+        },
+        {
+          "operator": "aten::mul",
+          "flops": 953614,
+          "calls": 3
+        }
+      ]
+    },
+    {
+      "label": "C2",
+      "yaml": "D:\\iwen-codex\\codex-shop\\experiments\\sfd_lite_canonical\\models\\C2_sfd_lite_ciou.yaml",
+      "yaml_sha256": "5e3f64ffda45dc1cbab8bf14d8102d258936811a18236c69904773976bd6a2d9",
+      "state": "unfused_eval_fp32_cpu",
+      "input": [
+        1,
+        3,
+        640,
+        640
+      ],
+      "params_direct": 687572,
+      "trainable_params_direct": 687564,
+      "thop_params": 687572,
+      "thop_macs": 3303546188,
+      "thop_gmacs": 3.303546188,
+      "torch_profiler_flops": 6313165990,
+      "torch_profiler_gflops": 6.31316599,
+      "torch_profiler_nonzero_operators": [
+        {
+          "operator": "aten::conv2d",
+          "flops": 6298189976,
+          "calls": 88
+        },
+        {
+          "operator": "aten::mul",
+          "flops": 7507214,
+          "calls": 7
+        },
+        {
+          "operator": "aten::add",
+          "flops": 7468800,
+          "calls": 23
+        }
+      ]
+    },
+    {
+      "label": "C3",
+      "yaml": "D:\\iwen-codex\\codex-shop\\experiments\\sfd_lite_canonical\\models\\C3_no_sf_dca_lite.yaml",
+      "yaml_sha256": "67a74887662328baf758b5f977faf3df28f2684473439cdf8c053a4164b67166",
+      "state": "unfused_eval_fp32_cpu",
+      "input": [
+        1,
+        3,
+        640,
+        640
+      ],
+      "params_direct": 685108,
+      "trainable_params_direct": 685100,
+      "thop_params": 685108,
+      "thop_macs": 3290553600,
+      "thop_gmacs": 3.2905536,
+      "torch_profiler_flops": 6289420800,
+      "torch_profiler_gflops": 6.2894208,
+      "torch_profiler_nonzero_operators": [
+        {
+          "operator": "aten::conv2d",
+          "flops": 6274892800,
+          "calls": 83
+        },
+        {
+          "operator": "aten::mul",
+          "flops": 7507200,
+          "calls": 6
+        },
+        {
+          "operator": "aten::add",
+          "flops": 7020800,
+          "calls": 21
+        }
+      ]
+    }
+  ]
+}

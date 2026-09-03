@@ -1,0 +1,24 @@
+version: SFD-Lite-Canonical-v1
+seed_stage: 0
+initialization: scratch
+experiments:
+  B0:
+    model: models/B0_yolo11n_ciou.yaml
+    regression: ciou
+    question: complete SFD-Lite versus fair official YOLO11n baseline
+  C0:
+    model: models/C0_sfd_lite_canonical.yaml
+    regression: dynwd
+    question: canonical full SFD-Lite anchor
+  C1:
+    model: models/C1_no_sa_spd_lite.yaml
+    regression: dynwd
+    question: task-level contribution of the complete layer-1 SA-SPD-Lite module
+  C2:
+    model: models/C2_sfd_lite_ciou.yaml
+    regression: ciou
+    question: independent regression contribution of DyNWD
+  C3:
+    model: models/C3_no_sf_dca_lite.yaml
+    regression: dynwd
+    question: independent task-level contribution of SF-DCA-Lite

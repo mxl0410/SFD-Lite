@@ -1,0 +1,6 @@
+# Install a CUDA-compatible torch 2.13.0 build separately for the target server.
+numpy==2.4.4
+PyYAML==6.0.3
+Pillow==12.2.0
+ultralytics-thop==2.0.20
+pycocotools==2.0.10

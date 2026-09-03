@@ -1,0 +1,12 @@
+SFD-Lite research-code release
+
+This distribution contains a modified source snapshot of Ultralytics 8.4.60.
+Ultralytics source files retain their original copyright and AGPL-3.0 notices.
+The upstream project is available at https://github.com/ultralytics/ultralytics.
+
+SFD-Lite-specific additions include the SA-SPD-Lite and SF-DCA-Lite modules,
+canonical model configurations, the DyNWD regression branch, and reproducibility
+gate scripts. The entire combined distribution is provided under AGPL-3.0.
+
+Datasets, trained model weights, experiment outputs, and manuscript files are
+not included in this repository.
